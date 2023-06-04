@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32104.313
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabitMQProductAPI", "RabitMQProductAPI\RabitMQProductAPI.csproj", "{5EDA4497-62FA-44F3-84E4-42B29C003B24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EDA4497-62FA-44F3-84E4-42B29C003B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDA4497-62FA-44F3-84E4-42B29C003B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDA4497-62FA-44F3-84E4-42B29C003B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDA4497-62FA-44F3-84E4-42B29C003B24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFCC2479-E909-4299-A767-7793FDD48D37}
+	EndGlobalSection
+EndGlobal
