@@ -1,6 +1,6 @@
 ﻿using RabitMqProductAPI.Models;
 
-namespace RabitMqProductAPI.RabitMQ.Services
+namespace RabitMqProductAPI.Services
 {
     public interface IProductService
     {

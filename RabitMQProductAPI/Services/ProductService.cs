@@ -1,7 +1,7 @@
 ﻿using RabitMqProductAPI.Data;
 using RabitMqProductAPI.Models;
 
-namespace RabitMqProductAPI.RabitMQ.Services
+namespace RabitMqProductAPI.Services
 {
     public class ProductService : IProductService
     {

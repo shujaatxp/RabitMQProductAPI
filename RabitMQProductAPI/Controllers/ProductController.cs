@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RabitMqProductAPI.Models;
 using RabitMqProductAPI.RabitMQ;
-using RabitMqProductAPI.RabitMQ.Services;
+using RabitMqProductAPI.Services;
 
 namespace RabitMqProductAPI.Controllers
 {
