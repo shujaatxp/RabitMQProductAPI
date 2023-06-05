@@ -11,16 +11,16 @@ IConnection connection = factory.CreateConnection ();
 IModel channel = connection.CreateModel();
 
 string exchangename = "demoexchange";
-string routingkey = "demo-routing-key";
-string queuename = "demoqueue";
+string routingkey = "demo-queue";
+string queuename = "demo-queue";
 
-channel.ExchangeDeclare(exchangename, ExchangeType.Direct);
-channel.QueueDeclare(queuename, false, false, false, null);
-channel.QueueBind(queuename, exchangename, routingkey, null);
+//channel.ExchangeDeclare(exchangename, ExchangeType.Direct);
+//channel.QueueDeclare(queuename, false, false, false, null);
+//channel.QueueBind(queuename, exchangename, routingkey, null);
 
 for (int i = 0; i <= 5; i++)
 {
-    string message = $"hello youtube {i}";
+    int message = i;
     Console.WriteLine($"Message sent to Receiver: {message}");
 
     var json = JsonConvert.SerializeObject(message);
@@ -28,7 +28,7 @@ for (int i = 0; i <= 5; i++)
    
     channel.BasicPublish(exchangename, routingkey, null, messagebodybytes);
 
-    Thread.Sleep(1000);
+    //Thread.Sleep(1000);
 }
 
 

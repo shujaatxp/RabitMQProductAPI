@@ -12,12 +12,24 @@ factory.ClientProvidedName = "Rabbit Receiver2 App";
 IConnection connection = factory.CreateConnection();
 IModel channel = connection.CreateModel();
 
-string exchangename = "demoexchange";
-string routingkey = "demo-routing-key";
-string queuename = "demoqueue";
+string exchangename = "demo-dead-letter-exchange";
+string routingkey = "demo-queue";
+string queuename = "demo-dead-letter-queue";
 
-channel.ExchangeDeclare(exchangename, ExchangeType.Direct);
-channel.QueueDeclare(queuename, false, false, false, null);
+//channel.ExchangeDeclare(exchangename, ExchangeType.Fanout, true);
+
+channel.ExchangeDeclare(exchangename,ExchangeType.Fanout, true, false );
+
+
+channel.QueueDeclare(queuename, true, false, false,
+    new Dictionary<string, object>
+    {
+        {"demo-dead-letter-exchange","demo-dead-letter-exchange" },
+        {"x-queue-mode","lazy" }
+    }
+    );
+
+
 channel.QueueBind(queuename, exchangename, routingkey, null);
 channel.BasicQos(0, 1, false);
 
