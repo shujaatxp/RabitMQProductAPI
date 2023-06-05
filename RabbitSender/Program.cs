@@ -18,7 +18,7 @@ channel.ExchangeDeclare(exchangename, ExchangeType.Direct);
 channel.QueueDeclare(queuename, false, false, false, null);
 channel.QueueBind(queuename, exchangename, routingkey, null);
 
-for (int i = 0; i <= 50; i++)
+for (int i = 0; i <= 5; i++)
 {
     string message = $"hello youtube {i}";
     Console.WriteLine($"Message sent to Receiver: {message}");
